@@ -1,0 +1,199 @@
+<!doctype html>
+    <head>
+        <title> foodForU</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="style_login.css" />
+    </head>
+    <body>
+        <!--Nvabar-->
+       <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <div class="topnav" id="myTopnav">
+      <a id="company-name" href="index.html"> Food For Us</a> 
+  <a href="index.html" class="navbar_item active" id="home"> Home</a>
+  <a href="#news" class="navbar_item" id="about">About</a>
+  <a href="#contact" class="navbar_item" id="contact">Contact</a>
+  <a href="#services" class="navbar_item" id="service">Our Services</a>
+  <a href="#gin_designed.html" class="navbar_item" id="logIn">LogIn/SignUp</a>
+  <a  class="icon" onclick="navbar_components()">
+    <i class="fa fa-bars"></i>
+
+  </a>
+</div>
+<!-- NAVBAR ENDS-->
+<!-- MAin body of home page-->
+<div class="index-main">
+ <h2> What's on your mind?</h2>
+ <input type=text id="index-search">
+ <button type="submit" id="index-submit">Search</button>
+ <div class="row"> 
+ <div class="index-column1">
+   <h2> Updates</h2>
+   <ul>
+    <li> MTF for sale of wheat under OMSS(D) through E-Auction 27.05.2020 in Punjab</li>
+
+<li>  MTF of E-Auction 27.05.2020 for sale of wheat under OMSS (D) from UT Chandigarh</li>
+    
+<li> Sale of wheat FAQ under OMSS (D) 2020-21 in Delhi Region WHEAT(FAQ)/TE-52 (2020-21) DATED 21.05.2020.</li>
+    
+<li>  MTF for sale of wheat under OMSS(D) through Dedicated Movt for E-Auction 27.05.2020 in Punjab</li>
+    
+<li> Sale of Rice Grade-'A' under OMSS (D) 2020-21 in Delhi Region RICE/T.E-56 (2020-21) dated 21.05.2020</li>
+<li>Sale of wheat URS under OMSS (D) 2020-21 in Delhi Region WHEAT(URS)/TE-19 (2020-21) DATED 21.05.2020</li>
+<li>Quotation for Annual Maintenance Contract of Numeric UPS for a period of one year installed at Food Corporation of India, Regional Office, Trivandrum</li>
+</li>E-Tender notice for disposal of non- issuable (damaged) Food grains lying at depots under Divisional Offices Mysore and Raichur of Karnataka-Reg.</li>
+
+</li>Allotment order for OMSS(D) Sale of Rice Grade "A" for the E-auction held on 20.05.2020</li>
+
+</li>Notice inviting tender for systematic maintenance contract of railway siding at FSD Wardha dated 20.05.2020</li>
+
+</li>The Terms and Conditions for sale of wheat to Small (Private) Traders in Haryana</li>
+   
+   </ul>
+   
+ </div>
+ <div class="index-column2">
+     <h2> Market price</h2>
+     <label for="selType">Choose type of food stock:</label>
+    
+     <select id = "selType">
+        <option >Select Type</option>
+        <option value = "cereal">Cereals</option>
+        <option value = "pulses">Pulses</option>
+        <option value = "oilSeed">OilSeeds</option>
+       </select>
+       <input type = "button"
+         value = "Submit"
+         onclick = "showItem()" />
+
+
+         <div id="elements" style="display: none;"> 
+     <div id="pulses">
+    <table id="t01" style="width:100%" >
+        <h3> pulses</h3>
+        <tr>
+          <th>Sl. No.</th>
+          <th>Stock Name</th>
+          <th>Price/quintal(INR)</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>ARHAR (TUR/RED GRAM)(WHOLE)</td>	
+          <td>5800</td> 
+          
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>BLACK GRAM (URD BEANS)(WHOLE)	</td>
+          <td>5700</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td> LENTIL (MASUR)(WHOLE)</td>
+            <td>	4800</td>
+          </tr>
+      </table>
+    </div>
+
+    <div id="cereal">
+        <table id="t01" style="width:100%" >
+            <tr>
+              <th>pulses Sl. No.</th>
+              <th>Stock Name</th>
+              <th>Price/quintal(INR)</th>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>BAJRA(PEARL MILLET/CUMBU)	
+                
+                </td>
+              <td>2000</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>BARLEY (JAU)	</td>
+              <td>1525</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>JOWAR(SORGHUM)</td>
+                <td>HYBRID:2550, MALDANDI:2570</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>PADDY(DHAN)(COMMON)</td>  
+                <td>COMMON:1815, GRADE-A:1835</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>RAGI(FINGER MILLET)</td>
+                <td>3150</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>WHEAT	</td>
+                  <td>1925</td>
+              </tr>
+          </table>
+        </div>
+        <div id="oilSeed">
+            <table id="t01" style="width:100%" >
+                <tr>
+                  <th>oil seedssSl. No.</th>
+                  <th>Stock Name</th>
+                  <th>Price/quintal(INR)</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Copra	</td>
+                  <td>Milling:9521, Ball:9920</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Groundnut	</td>
+                  <td>5090</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Mustard</td>
+                    <td>4425</td>
+                  </tr>
+                  <tr>
+                      <td>4</td>
+                      <td>
+                        Sesamum(Sesame,Gingelly,Til)	
+                      </td>
+                      <td>6485</td>
+                  </tr>
+              </table>
+            </div>
+        </div>
+       
+
+</div>
+<div class="index-column3">
+    <h2> Latest News</h2>
+   <ul>  
+       <li>Coronavirus crisis: Indian farmers gather record crop, But cannot move it.
+        <img src="adc_2.png" width=250px/>
+       </li>
+       <li>UP warns against hoarding and black marketing of food items.
+        <img src="adc_3.png" width=250px/>
+       </li>
+       <li>Ahead of Eid, FCS&CA Intensifies Market Checking in Srinagar
+        <img src="adc_4.png" width=250px/>
+       </li>
+       <li></li>
+</ul>
+  </div>
+
+</div>
+</div>
+
+<script src="index_new.js"></script>
+     </body>
+
+</html>
