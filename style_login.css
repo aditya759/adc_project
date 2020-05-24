@@ -80,6 +80,7 @@ body {
 background-color: rgb(255, 187, 0);
 }
 
+/*styling table */
 table, th, td {
   border: 1px solid black;
   padding: 15px;
@@ -98,7 +99,9 @@ table#t01 th {
 li:hover{
   background-color: rgb(127, 253, 9);
 }
-
+.table-content td:hover{
+  background-color: #2ecc71;
+}
 
 /*FOr LogIn Page */
 body{
@@ -191,10 +194,23 @@ h2{
   .index-column2 {
     height:400px;
   }
-
+  #user_div{
+    width:100%;
+  }
   
 }
 
+/* Desugnin page after login*/
+#logout-btn{position:fixed;
+   right:10px;
+   top:5px;
+   background-color: #b4cc2e;
+   border-radius: 1px;
+   width: 80px;
+   height:40px;
 
-  
-  
+}
+#logout-btn:hover{
+  background-color: rgb(0, 255, 200);
+}
+
